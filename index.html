@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nilesh Sen — Backend Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">Nilesh Sen</div>
+  <ul class="nav-links">
+    <li><a href="#snapshot">Snapshot</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#snapshot" onclick="closeMobile()">Snapshot</a></li>
+    <li><a href="#about" onclick="closeMobile()">About</a></li>
+    <li><a href="#skills" onclick="closeMobile()">Skills</a></li>
+    <li><a href="#projects" onclick="closeMobile()">Projects</a></li>
+    <li><a href="#github" onclick="closeMobile()">GitHub</a></li>
+    <li><a href="#certifications" onclick="closeMobile()">Certs</a></li>
+    <li><a href="#resume" onclick="closeMobile()">Resume</a></li>
+    <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- 1. HERO -->
+<section id="hero">
+  <div class="hero-spotlight" id="heroSpotlight"></div>
+  <div class="hero-content hero-split">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-glow"></div>
+      <div class="hero-photo-circle">
+        <img src="photo.jpg" alt="Nilesh Sen" class="hero-photo" onerror="this.parentElement.classList.add('no-photo')"/>
+        <div class="hero-photo-initials">NS</div>
+      </div>
+    </div>
+    <div class="hero-text">
+      <div class="hero-available">
+        <span class="dot"></span> Open to Software Development Internships and Entry-Level Engineering Roles
+      </div>
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Nilesh <span class="accent-text">Sen</span></h1>
+      <h2 class="hero-role">Backend Developer</h2>
+      <p class="hero-typing"><span id="typedRole">Building Secure REST APIs</span><span class="typing-cursor">|</span></p>
+      <p class="hero-intro">Backend developer specializing in secure authentication systems, encrypted data storage, and REST APIs. I've built projects featuring AES-256 encryption, JWT authentication, role-based access control, and device fingerprinting.</p>
+      <div class="hero-btns">
+        <a href="resume.pdf" download="Nilesh_Sen_Resume.pdf" class="btn btn-primary">⬇ Download Resume</a>
+        <a href="https://github.com/Nilesh907" target="_blank" class="btn btn-secondary">🐙 GitHub</a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Nilesh907" target="_blank" class="hero-social-icon" aria-label="GitHub">🐙</a>
+        <a href="https://www.linkedin.com/in/nilesh-sen-463113284" target="_blank" class="hero-social-icon" aria-label="LinkedIn">in</a>
+        <a href="mailto:nileshsen873@gmail.com" class="hero-social-icon" aria-label="Email">✉️</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. ENGINEERING SNAPSHOT -->
+<section id="snapshot">
+  <div class="section-header reveal">
+    <div class="section-label">Quick Overview</div>
+    <h2 class="section-title">Engineering Snapshot</h2>
+  </div>
+  <div class="snapshot-grid reveal">
+    <div class="snapshot-card highlight-card">
+      <div class="snapshot-icon">💼</div>
+      <div class="snapshot-info">
+        <div class="snapshot-key">Availability</div>
+        <div class="snapshot-val">Open to SDE Internships & Backend Roles</div>
+      </div>
+    </div>
+    <div class="snapshot-card">
+      <div class="snapshot-icon">🎓</div>
+      <div class="snapshot-info">
+        <div class="snapshot-key">Education</div>
+        <div class="snapshot-val">B.Tech CSE — 2023–2027</div>
+      </div>
+    </div>
+    <div class="snapshot-card">
+      <div class="snapshot-icon">⚙️</div>
+      <div class="snapshot-info">
+        <div class="snapshot-key">Backend Stack</div>
+        <div class="snapshot-val">Node.js · Express.js · MongoDB · REST APIs</div>
+      </div>
+    </div>
+    <div class="snapshot-card">
+      <div class="snapshot-icon">🧩</div>
+      <div class="snapshot-info">
+        <div class="snapshot-key">Core CS</div>
+        <div class="snapshot-val">Data Structures · DBMS · Operating Systems · Learning System Design</div>
+      </div>
+    </div>
+    <div class="snapshot-card">
+      <div class="snapshot-icon">🌐</div>
+      <div class="snapshot-info">
+        <div class="snapshot-key">Location</div>
+        <div class="snapshot-val">Indore, India</div>
+      </div>
+    </div>
+    <div class="snapshot-card">
+      <div class="snapshot-icon">🎯</div>
+      <div class="snapshot-info">
+        <div class="snapshot-key">Current Focus</div>
+        <div class="snapshot-val">Backend Engineering · DSA · System Design</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ABOUT -->
+<section id="about">
+  <div class="section-header reveal">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Who I Am</h2>
+  </div>
+  <div class="about-wrapper reveal">
+    <div class="about-photo-box">
+      <img src="photo.jpg" alt="Nilesh Sen" class="about-photo" onerror="this.parentElement.classList.add('no-photo')"/>
+      <div class="about-initials">NS</div>
+    </div>
+    <div class="about-text-box">
+      <p>I build backend systems where security and data integrity matter — encrypted storage, JWT authentication, and role-based access control. My projects include a paper-protection platform using AES-256 encryption and device fingerprinting, a personal finance tracker with MongoDB aggregation pipelines, and an AI-powered meeting summarizer built on the OpenAI API. I work primarily in Node.js and Express, with MongoDB and MySQL for data, and I'm currently strengthening my foundations in data structures, database design, and system design so I can reason about scale, not just ship features.</p>
+      <div class="about-tags">
+        <span>Node.js</span>
+        <span>Express.js</span>
+        <span>MongoDB</span>
+        <span>REST APIs</span>
+        <span>DSA</span>
+        <span>Problem Solving</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SKILLS -->
+<section id="skills">
+  <div class="section-header reveal">
+    <div class="section-label">Technical Skills</div>
+    <h2 class="section-title">Tech Stack</h2>
+  </div>
+  <div class="skills-table reveal">
+    <div class="skill-row">
+      <div class="skill-category-name">Languages</div>
+      <div class="skill-items">
+        <span>JavaScript</span><span>Python</span><span>SQL</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-category-name">Backend</div>
+      <div class="skill-items">
+        <span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>JWT Authentication</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-category-name">Database</div>
+      <div class="skill-items">
+        <span>MongoDB</span><span>MySQL</span><span>Database Design</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-category-name">Tools</div>
+      <div class="skill-items">
+        <span>Git</span><span>GitHub</span><span>Postman</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-category-name">Core CS</div>
+      <div class="skill-items">
+        <span>DSA</span><span>DBMS</span><span>Operating Systems</span><span>Computer Networks</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-category-name">Soft Skills</div>
+      <div class="skill-items">
+        <span>Consistency</span><span>Teamwork</span><span>Leadership</span><span>Time Management</span><span>Continuous Learning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. PROJECTS -->
+<section id="projects">
+  <div class="section-header reveal">
+    <div class="section-label">Work</div>
+    <h2 class="section-title">Projects</h2>
+  </div>
+
+  <!-- Project 1: ExamShield -->
+  <div class="project-block reveal">
+    <div class="project-top">
+      <div class="project-num">01</div>
+      <div class="project-header-info">
+        <h3 class="project-name">ExamShield <span class="project-subtitle">Secure Online Examination Paper Protection System</span></h3>
+      </div>
+    </div>
+
+    <div class="project-visual">
+      <img src="examshield-screenshot.png" alt="ExamShield project screenshot" class="project-screenshot-img" onerror="this.parentElement.classList.add('no-shot')"/>
+      <div class="screenshot-placeholder">
+        <div class="screenshot-placeholder-icon">🖼️</div>
+        <div class="screenshot-placeholder-text">examshield-screenshot.png</div>
+        <div class="screenshot-placeholder-hint">Add your project screenshot to this filename</div>
+      </div>
+    </div>
+
+    <p class="project-desc">Designed and developed a secure examination management platform focused on preventing question paper leaks and unauthorized access. The system uses AES-256 encryption, JWT authentication, role-based access control, SHA-256 integrity verification, and device fingerprinting to protect confidential exam papers. It also includes a real-time admin dashboard for monitoring exam activity and security events.</p>
+
+    <div class="project-stack-inline">
+      <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JWT</span><span>EJS</span>
+    </div>
+
+    <div class="project-highlights">
+      <div class="highlights-label">Key Features</div>
+      <div class="highlights-grid">
+        <span><i class="hl-check">✓</i> AES-256 Paper Encryption</span>
+        <span><i class="hl-check">✓</i> JWT Authentication &amp; Secure Sessions</span>
+        <span><i class="hl-check">✓</i> Role-Based Access Control (RBAC)</span>
+        <span><i class="hl-check">✓</i> SHA-256 Tamper Detection</span>
+        <span><i class="hl-check">✓</i> Device Fingerprinting &amp; Session Binding</span>
+        <span><i class="hl-check">✓</i> Admin Security Dashboard</span>
+        <span><i class="hl-check">✓</i> Student Exam Portal</span>
+        <span><i class="hl-check">✓</i> REST API Architecture</span>
+      </div>
+    </div>
+
+    <div class="project-tags-section">
+      <div class="project-block-label">Backend Highlights</div>
+      <div class="project-tags-row">
+        <span>AES-256 Encryption</span><span>JWT Authentication</span><span>Role-Based Access Control</span><span>SHA-256 Integrity Verification</span><span>RESTful APIs</span><span>Device Fingerprinting</span>
+      </div>
+    </div>
+
+    <div class="project-impact">
+      <div class="project-block-label">Impact</div>
+      <ul class="impact-list">
+        <li>Protects confidential examination papers from unauthorized access.</li>
+        <li>Detects suspicious activities during examinations.</li>
+        <li>Provides centralized security monitoring for administrators.</li>
+      </ul>
+    </div>
+
+    <div class="project-btn-group">
+      <!-- <a href="#" class="project-demo-btn">🔗 Live Demo</a> -->
+      <a href="https://github.com/Nilesh907/Secure-Online-Exam-System" target="_blank" class="project-github-btn">📂 GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 6. GITHUB -->
+<section id="github">
+  <div class="section-header reveal">
+    <div class="section-label">Code & Projects</div>
+    <h2 class="section-title">GitHub Activity</h2>
+  </div>
+  <div class="github-wrapper reveal">
+    <div class="github-profile">
+      <div class="github-avatar-box">🐙</div>
+      <div class="github-profile-info">
+        <div class="github-username">Nilesh907</div>
+        <div class="github-bio">Backend Developer · Node.js · MongoDB · Open to Internships</div>
+        <a href="https://github.com/Nilesh907" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:1rem;font-size:0.82rem;padding:0.6rem 1.4rem;">Visit GitHub →</a>
+      </div>
+    </div>
+    <div class="pinned-label">Top Repositories</div>
+    <div class="pinned-grid">
+      <div class="pinned-card">
+        <div class="pinned-icon">🔐</div>
+        <div class="pinned-name">ExamShield</div>
+        <div class="pinned-desc">Secure online examination paper protection system with encryption, JWT authentication, and role-based access control.</div>
+        <div class="pinned-tags"><span>Node.js</span><span>MongoDB</span><span>Express.js</span></div>
+        <a href="https://github.com/Nilesh907" target="_blank" class="pinned-link">Open Repository →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-header reveal">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Certifications</h2>
+  </div>
+  <div class="certs-grid reveal">
+    <div class="cert-card">
+      <div class="cert-left">
+        <div class="cert-icon">☁️</div>
+      </div>
+      <div class="cert-right">
+        <div class="cert-issuer">Forage × AWS</div>
+        <div class="cert-name">AWS Solutions Architecture Job Simulation</div>
+        <div class="cert-desc">Completed a job simulation involving designing scalable cloud architectures using AWS services including EC2, S3, RDS, and Load Balancers.</div>
+        <div class="cert-footer">
+          <span class="cert-year">2024</span>
+          <a href="Certificate1.PDF" class="cert-link">View Certificate →</a>
+        </div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-left">
+        <div class="cert-icon">🛡️</div>
+      </div>
+      <div class="cert-right">
+        <div class="cert-issuer">Forage × Deloitte</div>
+        <div class="cert-name">Cyber Job Simulation</div>
+        <div class="cert-desc">Completed a cybersecurity simulation covering threat detection, incident response planning, and vulnerability assessment for a simulated enterprise environment.</div>
+        <div class="cert-footer">
+          <span class="cert-year">2025</span>
+          <a href="Certificate3.PDF" class="cert-link">View Certificate →</a>
+        </div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-left">
+        <div class="cert-icon">🔷</div>
+      </div>
+      <div class="cert-right">
+        <div class="cert-issuer">Microsoft</div>
+        <div class="cert-name">Get Started with AI in Azure</div>
+        <div class="cert-desc">Completed a Microsoft Learn path covering core AI concepts, Azure AI services, and building basic AI-powered solutions on Azure.</div>
+        <div class="cert-footer">
+          <span class="cert-year">2025</span>
+          <a href="Certificate4.PDF" class="cert-link">View Certificate →</a>
+        </div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-left">
+        <div class="cert-icon">🤖</div>
+      </div>
+      <div class="cert-right">
+        <div class="cert-issuer">Forage</div>
+        <div class="cert-name">GenAI Powered Data Analytics Job Simulation</div>
+        <div class="cert-desc">Completed a simulation applying generative AI techniques to analyze datasets, generate insights, and build data-driven recommendations.</div>
+        <div class="cert-footer">
+          <span class="cert-year">2025</span>
+          <a href="Certificate5.PDF" class="cert-link">View Certificate →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. RESUME -->
+<section id="resume">
+  <div class="section-header reveal">
+    <div class="section-label">Resume</div>
+    <h2 class="section-title">Resume</h2>
+    <p class="section-sub reveal">One-page ATS-friendly resume highlighting backend development, projects, and technical skills.</p>
+  </div>
+  <div class="resume-wrapper reveal">
+    <div class="resume-preview-col">
+      <div class="resume-preview-card">
+        <img src="resume-preview.png" alt="Preview of Nilesh Sen's resume" class="resume-preview-img" onerror="this.parentElement.classList.add('no-preview')"/>
+        <div class="resume-preview-fallback">
+          <div class="rpf-header">
+            <div class="rpf-avatar">NS</div>
+            <div>
+              <div class="rpf-name"></div>
+              <div class="rpf-role"></div>
+            </div>
+          </div>
+          <div class="rpf-section-title"></div>
+          <div class="rpf-line w90"></div>
+          <div class="rpf-line w75"></div>
+          <div class="rpf-line w60"></div>
+          <div class="rpf-section-title"></div>
+          <div class="rpf-line w90"></div>
+          <div class="rpf-line w40"></div>
+          <div class="rpf-section-title"></div>
+          <div class="rpf-line w75"></div>
+          <div class="rpf-line w60"></div>
+        </div>
+      </div>
+    </div>
+    <div class="resume-actions">
+      <a href="resume.pdf" download="Nilesh_Sen_Resume.pdf" class="btn btn-primary resume-btn resume-btn-lg">⬇ Download PDF Resume</a>
+      <a href="resume.pdf" target="_blank" class="btn btn-outline resume-btn">👁 Open Full Screen</a>
+      <div class="resume-info-box">
+        <div class="resume-info-title">Resume Highlights</div>
+        <div class="ri-item">💼 <span>Backend Developer</span></div>
+        <div class="ri-item">🧩 <span>Node.js · Express.js · MongoDB</span></div>
+        <div class="ri-item">📁 <span>Backend Projects</span></div>
+        <div class="ri-item">🎯 <span>Open to Backend Internships</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CONTACT -->
+<section id="contact">
+  <div class="section-header reveal">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's Build Something Together</h2>
+    <p class="section-sub reveal">Open for internship opportunities and backend collaborations. I usually reply within a day.</p>
+  </div>
+
+  <div class="contact-wrapper reveal">
+
+    <!-- Contact info list -->
+    <div class="contact-list">
+      <a href="mailto:nileshsen873@gmail.com" class="contact-row" aria-label="Send email to Nilesh Sen">
+        <div class="contact-row-icon">✉️</div>
+        <div class="contact-row-info">
+          <div class="contact-row-label">Email</div>
+          <div class="contact-row-value">nileshsen873@gmail.com</div>
+        </div>
+      </a>
+      <a href="tel:+919131163906" class="contact-row">
+        <div class="contact-row-icon">📞</div>
+        <div class="contact-row-info">
+          <div class="contact-row-label">Phone</div>
+          <div class="contact-row-value">+91 9131163906</div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/nilesh-sen-463113284" target="_blank" class="contact-row">
+        <div class="contact-row-icon">💼</div>
+        <div class="contact-row-info">
+          <div class="contact-row-label">LinkedIn</div>
+          <div class="contact-row-value">nilesh-sen-463113284</div>
+        </div>
+      </a>
+      <a href="https://github.com/Nilesh907" target="_blank" class="contact-row">
+        <div class="contact-row-icon">🐙</div>
+        <div class="contact-row-info">
+          <div class="contact-row-label">GitHub</div>
+          <div class="contact-row-value">github.com/Nilesh907</div>
+        </div>
+      </a>
+      <div class="contact-row contact-row-static">
+        <div class="contact-row-icon">📍</div>
+        <div class="contact-row-info">
+          <div class="contact-row-label">Location</div>
+          <div class="contact-row-value">Indore, Madhya Pradesh, India</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact form -->
+    <form class="contact-form-card" id="contactForm">
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required/>
+        </div>
+        <div class="form-field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required/>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" placeholder="Tell me about the role or project..." rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit-btn">🤝 Let's Work Together</button>
+      <p class="form-note" id="formNote">Opens your email app with the message pre-filled.</p>
+    </form>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Nilesh Sen</span>
+    <span class="footer-sep">·</span>
+    <span>Backend Developer</span>
+    <span class="footer-sep">·</span>
+    <span>Indore, India</span>
+    <span class="footer-sep">·</span>
+    <span id="currentYear">2026</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
