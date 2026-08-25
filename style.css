@@ -683,6 +683,24 @@ section:nth-child(even) { background: var(--bg2); }
   display: flex; flex-direction: column; gap: 1.1rem;
   transition: border-color 0.35s ease;
 }
+
+.resume-preview-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  height: 100%;
+}
+
+.rpf-fallback-text {
+  color: #9a9ab0;
+  font-size: 0.9rem;
+  max-width: 280px;
+  margin: 0;
+}
 .contact-form-card:focus-within { border-color: var(--accent); }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-field { display: flex; flex-direction: column; gap: 0.5rem; text-align: left; }
