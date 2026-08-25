@@ -148,6 +148,49 @@ section:nth-child(even) { background: var(--bg2); }
   padding: 7rem 4rem 4rem;
   position: relative;
   overflow: hidden;
+  background: radial-gradient(ellipse 130% 90% at 50% -15%, #1b2444 0%, #0f1428 45%, #05060c 100%);
+}
+
+/* ===========================
+   HERO STARFIELD (night-sky effect)
+   =========================== */
+.hero-stars {
+  position: absolute; inset: 0; overflow: hidden; z-index: 0; pointer-events: none;
+}
+.star-layer {
+  position: absolute; inset: -60px;
+  background-repeat: repeat; border-radius: 50%;
+}
+.star-layer.stars-small { animation: starDrift 140s linear infinite; opacity: 0.65; }
+.star-layer.stars-medium { animation: starDrift 90s linear infinite reverse; opacity: 0.8; }
+.star-layer.stars-large { animation: starDrift 60s linear infinite, starTwinkle 3.6s ease-in-out infinite; }
+@keyframes starDrift {
+  from { transform: translate3d(0,0,0); }
+  to { transform: translate3d(-120px,-260px,0); }
+}
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.shooting-star {
+  position: absolute;
+  top: var(--sy, 12%); left: var(--sx, 75%);
+  width: 3px; height: 3px; border-radius: 50%;
+  background: #fff;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.9));
+  opacity: 0;
+}
+.shooting-star::before {
+  content: ""; position: absolute; top: 50%; right: 50%;
+  width: 110px; height: 1px; transform-origin: right center;
+  transform: translateY(-50%) rotate(0deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.85));
+}
+.shooting-star.active { animation: shootMove 1.15s cubic-bezier(.3,.6,.4,1) forwards; }
+@keyframes shootMove {
+  0% { opacity: 1; transform: translate(0,0); }
+  75% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-230px, 230px); }
 }
 .hero-spotlight {
   position: absolute; inset: 0; pointer-events: none; z-index: 0;
@@ -569,13 +612,10 @@ section:nth-child(even) { background: var(--bg2); }
   transition: border-color 0.35s ease, box-shadow 0.35s ease;
 }
 .resume-preview-card:hover { border-color: var(--accent); box-shadow: 0 28px 65px rgba(0,0,0,0.42); }
-.resume-preview-img {
-  width: 100%; height: 100%; object-fit: cover; object-position: top;
-  display: block; user-select: none; pointer-events: none;
+.resume-preview-embed {
+  width: 100%; height: 100%; display: block; border: none;
 }
-.resume-preview-card.no-preview .resume-preview-img { display: none; }
-.resume-preview-fallback { display: none; width: 100%; height: 100%; padding: 2.2rem 2rem; flex-direction: column; }
-.resume-preview-card.no-preview .resume-preview-fallback { display: flex; }
+.resume-preview-fallback { width: 100%; height: 100%; padding: 2.2rem 2rem; display: flex; flex-direction: column; }
 .rpf-header { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.4rem; }
 .rpf-avatar {
   width: 46px; height: 46px; border-radius: 50%; background: var(--accent); color: #fff;
@@ -731,22 +771,9 @@ footer { padding: 2rem 3rem; border-top: 1px solid rgba(255,255,255,0.08); backg
   .hero-photo-glow { animation: none; }
   .typing-cursor { animation: none; }
   .hero-spotlight { display: none; }
+  .star-layer { animation: none; }
+  .shooting-star { display: none; }
   .scroll-progress { display: none; }
   .section-title::after { transition: none; }
   .btn { transform: none !important; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
